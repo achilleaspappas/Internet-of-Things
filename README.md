@@ -1,4 +1,4 @@
-# Internet-of-Things
+# Internet of Things
 This ia a university project for the course Internet of Things.
 
 The project goal is to make a traffic light in the ThingSpeak platform.
