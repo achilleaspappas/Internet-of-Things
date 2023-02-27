@@ -1,8 +1,5 @@
 # Internet of Things
-This ia a university project for the course Internet of Things.
-
-The project goal is to make a traffic light in the ThingSpeak platform.
-The traffic light is controled by an arduino.
+Arduino and ThinkSpeak
 
 ## Components
 - Arduino Uno 
