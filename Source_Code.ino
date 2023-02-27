@@ -2,9 +2,9 @@
 SoftwareSerial espSerial(6, 7);
 
 #define DEBUG true 
-String mySSID = "VODAFONE_4354_GUEST";  // WiFi SSID
-String myPassword = "urxf7QNeZY"; // WiFi Password
-String myWriteAPI = "CQNT7P4EF9X2GQWG"; // Write API of traffic light channel
+String mySSID = "";  // WiFi SSID
+String myPassword = ""; // WiFi Password
+String myWriteAPI = ""; // Write API of traffic light channel
 String myHost = "api.thingspeak.com"; // Host name
 String myPort = "80"; // Port number
 unsigned long previousMillis = 0; // Initial value for timer
@@ -77,42 +77,3 @@ String espData(String command, const int timeout, boolean debug) {
   }
   return response;
 }
-
-
-
-/*
-  Not used code
-
-  for(int myField=1; myField<4; myField++) {
-    if(myField == 2) {
-      delayValue=20000;
-    }
-    else {
-      delayValue=30000;
-    }
-    for (int lightValue=1; lightValue>-1; lightValue--) {
-      if(lightValue == 0) { 
-        delayValue=10000;
-      }
-      sendData(myWriteAPI, "field" + String(myField), String(lightValue), delayValue);
-    }
-  }
-*/
-
-
-/*
-{"channel":{"id":2000973,"name":"Traffic Light","latitude":"0.0","longitude":"0.0",
-"field1":"Field Label 1","field2":"Field Label 2","field3":"Field Label 3","field8":"Field Label 8",
-"created_at":"2023-01-05T16:53:49Z","updated_at":"2023-01-06T21:03:00Z","last_entry_id":11},
-"feeds":[{"created_at":"2023-01-06T21:13:33Z","entry_id":1,"field1":null,"field2":null,"field3":null,
-"field8":"0"},{"created_at":"2023-01-06T21:13:49Z","entry_id":2,"field1":null,"field2":null,"field3":null,"field8":"0"},
-{"created_at":"2023-01-06T21:14:47Z","entry_id":3,"field1":null,"field2":null,"field3":null,"field8":"0"},
-{"created_at":"2023-01-06T21:15:15Z","entry_id":4,"field1":null,"field2":null,"field3":null,"field8":"198"},
-{"created_at":"2023-01-06T21:15:30Z","entry_id":5,"field1":null,"field2":null,"field3":null,"field8":"198"},
-{"created_at":"2023-01-06T21:15:45Z","entry_id":6,"field1":null,"field2":null,"field3":null,"field8":"198"},
-{"created_at":"2023-01-06T21:16:56Z","entry_id":7,"field1":null,"field2":null,"field3":null,"field8":"198"},
-{"created_at":"2023-01-06T21:17:11Z","entry_id":8,"field1":null,"field2":null,"field3":null,"field8":"198"},
-{"created_at":"2023-01-06T21:17:37Z","entry_id":9,"field1":null,"field2":null,"field3":null,"field8":"198"},
-{"created_at":"2023-01-06T21:17:52Z","entry_id":10,"field1":null,"field2":null,"field3":null,"field8":"198"},
-{"created_at":"2023-01-06T21:18:07Z","entry_id":11,"field1":null,"field2":null,"field3":null,"field8":"198"}]}
-*/
